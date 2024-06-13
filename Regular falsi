@@ -1,0 +1,20 @@
+from sympy import *
+x=Symbol('x')
+g=input('Enter the function')
+f=lambdify(x,g)
+a=float(input('Enter a value:')#2
+b=float(input('Enter b value:')#3
+N=float(input("Enter tolarence:'))#0.001
+x=a
+c=b
+i=0
+while (abs(x-c)>=N:
+  x=c
+  c=((a*f(b)-b*f(a))/f(b)-f(a)));
+  if((f(a)*f(c)<0)):
+      b=c
+  else
+      a=c
+      i=i+1
+  print(f'Iteration {i} The root {c} function value %0.3f'%f(c))
+print('Final value of roor is %0.5f'%c)
